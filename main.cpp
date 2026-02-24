@@ -10,6 +10,12 @@ using namespace std;
 // Compare adjacent pairs, swap if left > right
 void bubble(vector<int>& numbers, int N)
 {
+    vector<int> num = {40, 10 ,30, 50, 20};
+    for(int i =0; i=0; i < num.size(); ++i){
+        if (num[i] > num[i+1]){
+            swap(num[i], num[i+1]);  
+        } 
+    } 
     // TODO: Implement one pass over elements [0..N-1], swapping adjacent pairs if out of order
 }
 
@@ -17,6 +23,20 @@ void bubble(vector<int>& numbers, int N)
 // Returns the index of the minimum value
 int selection(vector<int>& numbers, int start, int N)
 {
+    vector<int> numbers = {35, 15, 45, 10, 25};
+    int N = 5;
+    int i = 0;
+
+    int startidx = 0; 
+    int minIdx = startidx;
+    for (int j = _start+1; j< _number.size(); j++)
+    {
+            if (numbers[j]< number[minIdx])
+                minIdx = j;
+    }  
+    swap(numbers[startidx], numbers[minIdx]);
+
+
     // TODO: Find and return the index of the minimum element in [start..N-1]
     return start;
 }
@@ -27,7 +47,17 @@ void insertion(vector<int>& numbers, int idx)
 {
     // TODO: Insert numbers[idx] into its correct position in [0..idx-1]
 }
+    vector<int> numbers = {15, 25, 45, 10, 25};
+    int idx = 3; 
 
+    int key = numbers[idx];
+    int j = idx -1;
+    while (j >= 0 && numbers{[j] > key)
+    {
+    numbers[j+1] = numbers[j];
+    j--;
+    }
+    numbers[j+1] = key; 
 // ============================================================
 // Utility
 // ============================================================
