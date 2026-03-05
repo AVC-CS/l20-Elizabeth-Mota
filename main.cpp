@@ -10,7 +10,7 @@ using namespace std;
 // Compare adjacent pairs, swap if left > right
 void bubble(vector<int>& numbers, int N)
 {
-    vector<int> num = {40, 10, 30, 50, 20 };
+    vector<int> num = {40, 10, 30, 50, 20};
         for (int i = 0; i < num.size(); ++i){
             if (num[i] > num[i+1]){
                 swap(num[i], num[i+1]);  
@@ -45,7 +45,8 @@ int selection(vector<int>& numbers, int start, int N)
 void insertion(vector<int>& numbers, int idx)
 {
     // TODO: Insert numbers[idx] into its correct position in [0..idx-1]
-
+    vector<int> number = {15, 35, 45, 10, 25};
+    idx = 3;
     int key = numbers[idx];
     int j = idx - 1;
     while (j >= 0 && numbers[j] > key)
